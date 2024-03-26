@@ -1,52 +1,6 @@
 
 import SwiftUI
-//
-//struct ContentView: View {
-//
-//    var body: some View {
-//        NavigationView{
-//            ZStack{
-//                
-//                Image("BackgroundImage")
-//                    .resizable()
-//                    .edgesIgnoringSafeArea(.all)
-//                VStack {
-//                    Text("Choose what you want to visualise🎨")
-//                        .padding()
-//                        .background(Color.pink.opacity(0.3))
-//                        .background(Color.white.opacity(0.3))
-//                        .background(Color.blue.opacity(0.4))
-//                        .cornerRadius(10.0)
-//                        .foregroundColor(.white)
-//                        .multilineTextAlignment(.center)
-//                        .padding()
-//                    
-//                    Spacer()
-//                   
-//                }
-//                .padding(.top, 10)
-//                VStack{
-//                    ScrollView{
-//                        Spacer()
-//                        VStack(spacing: 20){
-//                            NavigationLink(destination: BezierCurveView()){
-//                                Text("Bezier Curve")
-//                                   
-//                            }
-//                        }
-//                        .frame(height: 300)
-//                        .cornerRadius(3.0)
-//                        .background(Color .white)
-//                    }
-//                }
-//            }
-//            
-//        }
-//
-//    }
-//}
 
-import SwiftUI
 
 struct ContentView: View {
     // Припустимо, у нас є структура для елементів
@@ -66,69 +20,62 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            ZStack{
+            ZStack(alignment: .top){
                 
-                
-                // Background image
                 Image("BackgroundImage")
                     .resizable()
                     .edgesIgnoringSafeArea(.all)
-                
-                VStack {
-                    Text("Choose what you want to visualise🎨")
-                        .padding()
-                        .background(Color.pink.opacity(0.3))
-                        .cornerRadius(10.0)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.top, 10)
-                        .padding(.bottom, 20)
-                    Spacer()
-                    ScrollView {
-                        VStack(spacing: 20) {
-                            Spacer()
-//                            ForEach(options) { option in
-//                                NavigationLink(destination: Text(option.title)) {
-//                                    HStack {
-//                                        Image(systemName: option.icon)
-//                                            .foregroundColor(.white)
-//                                            .padding()
-//                                            .background(Circle().fill(Color.blue))
-//                                            .shadow(radius: 2)
-//                                        
-//                                        VStack(alignment: .leading) {
-//                                            Text(option.title)
-//                                                .fontWeight(.bold)
-//                                            Text(option.subtitle)
-//                                                .font(.caption)
-//                                                .foregroundColor(.gray)
-//                                        }
-//                                        .padding(.leading, 10)
-//                                        
-//                                        Spacer()
-//                                        
-//                                        Toggle("", isOn: .constant(true))
-//                                            .toggleStyle(SwitchToggleStyle(tint: .green))
-//                                    }
-//                                    .padding()
-//                                    .frame(maxWidth: .infinity)
-//                                    .background(RoundedRectangle(cornerRadius: 20).fill(Color.white))
-//                                    .shadow(radius: 3)
-//                                }
-//                                
-//                            }
+                Text("Computer Graphic")
+                    .font(.largeTitle)
+                    .padding()
+                    .background(Color .pink.opacity(0.3))
+                    .background(Color .white.opacity(0.3))
+                    .background(Color .blue.opacity(0.4))
+                    .cornerRadius(5.0)
+                    .foregroundColor(.white.opacity(0.7))
+                    .padding(.top, 50)
+                ZStack(alignment: .bottom){
+                    ScrollView{
+                        Spacer()
+                            .padding(.bottom,300)
+                        VStack{
+                            VStack{
+                                Rectangle()
+                                       .fill(Color.gray.opacity(0.5))
+                                       .frame(width: 100, height: 5)
+                                       .cornerRadius(3.0)
+                                       .padding(10)
+                                Spacer()
+                            }
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
                             
                         }
-                        .padding(.horizontal, 20)
-                        .frame(maxWidth: .infinity)
+                        .frame(height: 800)
+                        .background(Color.white)
+                        .cornerRadius(30)
+                        .edgesIgnoringSafeArea(.bottom)
                     }
-                    .background(Color.white)
-                    .cornerRadius(15.0)
                     .edgesIgnoringSafeArea(.bottom)
-                    .frame(height: 500)
+                    VStack{
+                        Text("Scroll")
+                            .font(.caption)
+                            .foregroundColor(.gray.opacity(0.8))
+                            .fontWeight(.bold)
+                            
+                    }
+                    .padding(.top, 200)
+                    .frame( height: 200)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.white)
+                    
+                    
+                    
                     
                 }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                
             }
+            
         }
     }
 }
