@@ -15,3 +15,16 @@ struct cg3_00App: App {
         }
     }
 }
+
+
+
+func findPointsByUserVectorT(vectorT: [Double], controlPointsInCG: [CGPoint]) -> [CGPoint] {
+    let pointMantix = convertPointsToMatrix(controlPointsInCG)
+    let BezierMatrix = calculateBeizerMatrix(number: pointMantix.count - 1)
+    var pointsForUserVectorT = [CGPoint]()
+    for value in vectorT{
+        pointsForUserVectorT.append(CalculatePoint(parametrT: value, beizerMatrix: BezierMatrix, controlPoints: pointMantix))
+    }
+    return pointsForUserVectorT
+}
+
