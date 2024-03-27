@@ -56,17 +56,17 @@ struct BezierCurveView: View {
                 
                 Slider(value: $scale, in: 10...100)
                     .padding(.horizontal, 10)
-                    .foregroundColor(.pink.opacity(0.7))
-                    .accentColor(.pink.opacity(0.7))
+                    .foregroundColor(.purple.opacity(0.7))
+                    .accentColor(.purple.opacity(0.7))
                 Picker(selection: $methodType, label: Text("Виберіть метод")) {
                     ForEach(MethodType.allCases) { method in
                         Text(method.description).tag(method)
                     }
                 }
                 .frame(width: 350)
-                .background(Color.pink.opacity(0.3))
+                .background(Color.purple.opacity(0.3))
                 .cornerRadius(5)
-                .accentColor(Color.pink.opacity(0.8))
+                .accentColor(Color.purple.opacity(0.8))
                 
                 ZStack {
 
@@ -140,7 +140,7 @@ struct BezierCurveView: View {
                     }
                     .frame(width: 350, height: 570)
                     .aspectRatio(contentMode: .fit)
-                    .background(Color.pink.opacity(0.6))
+                    .background(Color.purple.opacity(0.6))
                     .cornerRadius(10)
                     
                     //отут
@@ -153,7 +153,7 @@ struct BezierCurveView: View {
                             .multilineTextAlignment(.center)
                             .padding(10)
                             .frame(width: 350)
-                            .background(Color.pink.opacity(0.5))
+                            .background(Color.purple.opacity(0.5))
                             .cornerRadius(10.0)
                             .frame(maxWidth: 350)
                             .foregroundColor(.white)
@@ -164,7 +164,7 @@ struct BezierCurveView: View {
                         .multilineTextAlignment(.center)
                         .padding(10)
                         .frame(width: 350)
-                        .background(Color.pink.opacity(0.5))
+                        .background(Color.purple.opacity(0.5))
                         .cornerRadius(10.0)
                         .frame(maxWidth: 350, maxHeight: 100)
                         .foregroundColor(.white)
@@ -175,7 +175,7 @@ struct BezierCurveView: View {
                         TextField("Cписок параметрів t", text: $UserInputVectorT)
                             .padding(15)
                             .frame(maxWidth: 170, maxHeight: 40)
-                            .background(Color.pink.opacity(0.2))
+                            .background(Color.purple.opacity(0.2))
                             .cornerRadius(5.0)
                         
                         Button("Знайти точки") {
@@ -212,9 +212,9 @@ struct BezierCurveView: View {
                         }
                         .padding(15)
                         .frame(maxWidth: 170, maxHeight: 40)
-                        .background(Color.pink.opacity(0.2))
+                        .background(Color.purple.opacity(0.2))
                         .cornerRadius(5.0)
-                        .foregroundColor(Color.pink.opacity(0.7))
+                        .foregroundColor(Color.purple.opacity(0.7))
                         .font(.system(.body, design: .default).weight(.bold))
                         .alert(isPresented: $ShowAlert) {
                             switch alertType {
@@ -232,7 +232,7 @@ struct BezierCurveView: View {
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: 320, maxHeight: 40)
                         .padding()
-                        .background(Color.pink.opacity(0.5))
+                        .background(Color.purple.opacity(0.5))
                         .cornerRadius(10.0)
                         .foregroundColor(.white)
                         .font(.system(size: 16, weight: .regular, design: .serif))
@@ -241,13 +241,13 @@ struct BezierCurveView: View {
                             TextField("Введіть x", text: $xInput)
                                 .padding(15)
                                 .frame(maxWidth: 170, maxHeight: 40)
-                                .background(Color.pink.opacity(0.2))
+                                .background(Color.purple.opacity(0.2))
                                 .cornerRadius(5.0)
                             
                             TextField("Введіть y", text: $yInput)
                                 .padding(15)
                                 .frame(maxWidth: 170, maxHeight: 40)
-                                .background(Color.pink.opacity(0.2))
+                                .background(Color.purple.opacity(0.2))
                                 .cornerRadius(5.0)
                         }
                         Button("Додати точку"){
@@ -278,9 +278,9 @@ struct BezierCurveView: View {
                         }
                         .padding(15)
                         .frame(maxWidth: 170, maxHeight: 300)
-                        .background(Color.pink.opacity(0.2))
+                        .background(Color.purple.opacity(0.2))
                         .cornerRadius(5.0)
-                        .foregroundColor(Color.pink.opacity(0.7))
+                        .foregroundColor(Color.purple.opacity(0.7))
                         .font(.system(.body, design: .default).weight(.bold))
                         
                     }
@@ -333,7 +333,7 @@ struct BezierCurveView: View {
                         }
                         .padding()
                         .frame(width: 350)
-                        .background(Color.pink.opacity(0.2))
+                        .background(Color.purple.opacity(0.2))
                         .cornerRadius(5)
                         
                         
