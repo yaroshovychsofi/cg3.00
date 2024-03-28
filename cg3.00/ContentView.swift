@@ -9,6 +9,7 @@ struct ContentView: View {
                 MainContentView()
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
@@ -46,6 +47,7 @@ struct MainContentView: View {
         ScrollView {
             Spacer().padding(.bottom, 350)
             MenuContentView()
+                
         }
         .edgesIgnoringSafeArea(.bottom)
     }
@@ -56,10 +58,12 @@ struct MenuContentView: View {
         VStack {
             DrawerHandleView()
             NavigationLinkView(destination: BezierCurveView(), iconName: "point.topleft.down.to.point.bottomright.curvepath", title: "Bezier Curve", subtitle: "With 4 and more points")
+               
             NavigationLinkView(destination: Text("Okay"), iconName: "wand.and.stars", title: "Fractal", subtitle: "Drawing fractus")
+              
             Spacer()
         }
-        .frame(minHeight: 600)
+        .frame(minHeight: 1000)
         .background(Color.white)
         .cornerRadius(45)
         .edgesIgnoringSafeArea(.bottom)
@@ -74,6 +78,7 @@ struct DrawerHandleView: View {
             .frame(width: 100, height: 5)
             .cornerRadius(3.0)
             .padding(10)
+        
     }
 }
 
@@ -101,6 +106,7 @@ struct NavigationLinkView<Destination: View>: View {
             .padding()
             .frame(maxWidth: .infinity)
             .background(RoundedRectangle(cornerRadius: 40).fill(Color.white).shadow(radius: 4))
+            
         }
         .padding(.horizontal, 20)
     }

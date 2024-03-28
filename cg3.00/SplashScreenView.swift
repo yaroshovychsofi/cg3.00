@@ -4,7 +4,7 @@ import SwiftUI
 struct SplashScreenView: View {
     @State private var IsActive = false
     @State private var Size = 0.8
-    @State private var Opacity = 0.5
+    @State private var Opacity = 1.0
     var body: some View {
         if IsActive {
             ContentView()

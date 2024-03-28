@@ -16,6 +16,7 @@
 		3B8B55302BB2D320004A2006 /* BezierCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B552F2BB2D320004A2006 /* BezierCurveView.swift */; };
 		3B8B55322BB335D4004A2006 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B8B55312BB335D4004A2006 /* MontserratAlternates-Regular.ttf */; };
 		3B8B55352BB387BA004A2006 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B55342BB387B9004A2006 /* SplashScreenView.swift */; };
+		3B8B55372BB3FD40004A2006 /* FractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B55362BB3FD3F004A2006 /* FractalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3B8B55312BB335D4004A2006 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
 		3B8B55332BB33622004A2006 /* cg3-00-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "cg3-00-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3B8B55342BB387B9004A2006 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		3B8B55362BB3FD3F004A2006 /* FractalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FractalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				3B8B552B2BB2D29B004A2006 /* MatrixMethod.swift */,
 				3B8B55342BB387B9004A2006 /* SplashScreenView.swift */,
 				3B8B552D2BB2D2E3004A2006 /* ParamMethod.swift */,
+				3B8B55362BB3FD3F004A2006 /* FractalView.swift */,
 			);
 			path = cg3.00;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8B552C2BB2D29B004A2006 /* MatrixMethod.swift in Sources */,
+				3B8B55372BB3FD40004A2006 /* FractalView.swift in Sources */,
 				3B8B55302BB2D320004A2006 /* BezierCurveView.swift in Sources */,
 				3B8B55202BB2D226004A2006 /* ContentView.swift in Sources */,
 				3B8B552E2BB2D2E3004A2006 /* ParamMethod.swift in Sources */,
