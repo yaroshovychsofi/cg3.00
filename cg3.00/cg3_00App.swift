@@ -12,7 +12,8 @@ struct cg3_00App: App {
 
     var body: some Scene {
         WindowGroup {
-            SplashScreenView()
+//            SplashScreenView()
+            TriangleView()
         }
     }
 }
