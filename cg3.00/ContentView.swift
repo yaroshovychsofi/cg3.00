@@ -1,5 +1,7 @@
 import SwiftUI
 
+
+
 struct ContentView: View {
     var body: some View {
         NavigationView {
@@ -59,7 +61,7 @@ struct MenuContentView: View {
             DrawerHandleView()
             NavigationLinkView(destination: BezierCurveView(), iconName: "point.topleft.down.to.point.bottomright.curvepath", title: "Bezier Curve", subtitle: "With 4 and more points")
                
-            NavigationLinkView(destination: Text("Okay"), iconName: "wand.and.stars", title: "Fractal", subtitle: "Drawing fractus")
+            NavigationLinkView(destination: FractalSettingsView(), iconName: "wand.and.stars", title: "Fractal", subtitle: "Drawing fractus")
               
             Spacer()
         }

@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		3B554EEA2BB9040200655117 /* IceFractal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B554EE92BB9040200655117 /* IceFractal.swift */; };
+		3B554EEE2BBA528D00655117 /* IceFractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B554EED2BBA528D00655117 /* IceFractalView.swift */; };
+		3B554EF02BBB66C100655117 /* CustomModifiersForView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B554EEF2BBB66C100655117 /* CustomModifiersForView.swift */; };
+		3B554EF22BBC49C100655117 /* SinFractal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B554EF12BBC49C100655117 /* SinFractal.swift */; };
+		3B554EF42BBC75B200655117 /* SinFractalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B554EF32BBC75B100655117 /* SinFractalView.swift */; };
+		3B554EF62BBC869C00655117 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3B554EF52BBC869B00655117 /* MontserratAlternates-Bold.ttf */; };
 		3B8B551E2BB2D226004A2006 /* cg3_00App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B551D2BB2D226004A2006 /* cg3_00App.swift */; };
 		3B8B55202BB2D226004A2006 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B8B551F2BB2D226004A2006 /* ContentView.swift */; };
 		3B8B55222BB2D22A004A2006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B8B55212BB2D22A004A2006 /* Assets.xcassets */; };
@@ -22,6 +27,11 @@
 
 /* Begin PBXFileReference section */
 		3B554EE92BB9040200655117 /* IceFractal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceFractal.swift; sourceTree = "<group>"; };
+		3B554EED2BBA528D00655117 /* IceFractalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IceFractalView.swift; sourceTree = "<group>"; };
+		3B554EEF2BBB66C100655117 /* CustomModifiersForView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiersForView.swift; sourceTree = "<group>"; };
+		3B554EF12BBC49C100655117 /* SinFractal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinFractal.swift; sourceTree = "<group>"; };
+		3B554EF32BBC75B100655117 /* SinFractalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinFractalView.swift; sourceTree = "<group>"; };
+		3B554EF52BBC869B00655117 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
 		3B8B551A2BB2D226004A2006 /* cg3.00.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cg3.00.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B8B551D2BB2D226004A2006 /* cg3_00App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cg3_00App.swift; sourceTree = "<group>"; };
 		3B8B551F2BB2D226004A2006 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,17 +76,22 @@
 		3B8B551C2BB2D226004A2006 /* cg3.00 */ = {
 			isa = PBXGroup;
 			children = (
+				3B554EF52BBC869B00655117 /* MontserratAlternates-Bold.ttf */,
 				3B8B55332BB33622004A2006 /* cg3-00-Info.plist */,
 				3B8B55312BB335D4004A2006 /* MontserratAlternates-Regular.ttf */,
-				3B8B551D2BB2D226004A2006 /* cg3_00App.swift */,
+				3B8B55342BB387B9004A2006 /* SplashScreenView.swift */,
 				3B8B551F2BB2D226004A2006 /* ContentView.swift */,
 				3B8B552F2BB2D320004A2006 /* BezierCurveView.swift */,
+				3B8B55362BB3FD3F004A2006 /* FractalView.swift */,
+				3B554EEF2BBB66C100655117 /* CustomModifiersForView.swift */,
+				3B554EED2BBA528D00655117 /* IceFractalView.swift */,
+				3B554EF12BBC49C100655117 /* SinFractal.swift */,
+				3B554EF32BBC75B100655117 /* SinFractalView.swift */,
+				3B8B551D2BB2D226004A2006 /* cg3_00App.swift */,
 				3B8B55212BB2D22A004A2006 /* Assets.xcassets */,
 				3B8B55232BB2D22A004A2006 /* Preview Content */,
 				3B8B552B2BB2D29B004A2006 /* MatrixMethod.swift */,
-				3B8B55342BB387B9004A2006 /* SplashScreenView.swift */,
 				3B8B552D2BB2D2E3004A2006 /* ParamMethod.swift */,
-				3B8B55362BB3FD3F004A2006 /* FractalView.swift */,
 				3B554EE92BB9040200655117 /* IceFractal.swift */,
 			);
 			path = cg3.00;
@@ -149,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B8B55252BB2D22A004A2006 /* Preview Assets.xcassets in Resources */,
+				3B554EF62BBC869C00655117 /* MontserratAlternates-Bold.ttf in Resources */,
 				3B8B55322BB335D4004A2006 /* MontserratAlternates-Regular.ttf in Resources */,
 				3B8B55222BB2D22A004A2006 /* Assets.xcassets in Resources */,
 			);
@@ -167,7 +183,11 @@
 				3B8B55302BB2D320004A2006 /* BezierCurveView.swift in Sources */,
 				3B8B55202BB2D226004A2006 /* ContentView.swift in Sources */,
 				3B8B552E2BB2D2E3004A2006 /* ParamMethod.swift in Sources */,
+				3B554EF22BBC49C100655117 /* SinFractal.swift in Sources */,
 				3B8B551E2BB2D226004A2006 /* cg3_00App.swift in Sources */,
+				3B554EEE2BBA528D00655117 /* IceFractalView.swift in Sources */,
+				3B554EF42BBC75B200655117 /* SinFractalView.swift in Sources */,
+				3B554EF02BBB66C100655117 /* CustomModifiersForView.swift in Sources */,
 				3B8B55352BB387BA004A2006 /* SplashScreenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

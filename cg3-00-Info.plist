@@ -5,6 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>MontserratAlternates-Regular.ttf</string>
+		<string>MontserratAlternates-Bold.ttf</string>
 	</array>
 </dict>
 </plist>
