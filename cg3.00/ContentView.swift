@@ -61,7 +61,7 @@ struct MenuContentView: View {
             DrawerHandleView()
             NavigationLinkView(destination: BezierCurveView(), iconName: "point.topleft.down.to.point.bottomright.curvepath", title: "Bezier Curve", subtitle: "With 4 and more points")
                
-            NavigationLinkView(destination: FractalSettingsView(), iconName: "wand.and.stars", title: "Fractal", subtitle: "Drawing fractus")
+            NavigationLinkView(destination: FractalsView(), iconName: "wand.and.stars", title: "Fractal", subtitle: "Drawing fractus")
               
             Spacer()
         }

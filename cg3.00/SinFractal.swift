@@ -32,6 +32,8 @@ struct SinFractalView: UIViewRepresentable {
         view.maxIterations = maxIterations
         view.boundsSize = boundsSize
         // Конвертація SwiftUI Color у UIColor
+        let pinch = UIPinchGestureRecognizer(target: view, action: #selector(view.handlePinch(_:)))
+        view.addGestureRecognizer(pinch)
         view.colors = colors.map { UIColor($0) }
         return view
     }
@@ -46,22 +48,75 @@ struct SinFractalView: UIViewRepresentable {
     }
 }
 
+// Визначення UIViewController, який міститиме  SinFractalUIView
+class SinFractalViewController: UIViewController {
+    var maxIterations: Int = 100
+    var boundsSize: Double = 200.0
+    var colors: [UIColor] = [.red, .green, .blue] // Приклад кольорів
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let view = SinFractalUIView(frame: self.view.frame)
+        view.maxIterations = maxIterations
+        view.boundsSize = boundsSize
+        view.colors = colors
+        
+        // Додавання жесту масштабування
+        let pinch = UIPinchGestureRecognizer(target: view, action: #selector(view.handlePinch(_:)))
+        view.addGestureRecognizer(pinch)
+
+        self.view.addSubview(view)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: self.view.topAnchor),
+            view.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            view.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            view.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
+        ])
+    }
+}
+
+// SwiftUI обгортка для  SinFractalViewController
+struct SinFractalViewControllerRepresentable: UIViewControllerRepresentable {
+    var maxIterations: Int
+    var boundsSize: Double
+    var colors: [Color]
+
+    func makeUIViewController(context: Context) -> SinFractalViewController {
+        let viewController = SinFractalViewController()
+        viewController.maxIterations = maxIterations
+        viewController.boundsSize = boundsSize
+        viewController.colors = colors.map { UIColor($0) } // Конвертація SwiftUI Color у UIColor
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: SinFractalViewController, context: Context) {
+        uiViewController.maxIterations = maxIterations
+        uiViewController.boundsSize = boundsSize
+        uiViewController.colors = colors.map { UIColor($0) }
+    }
+}
+
 class SinFractalUIView: UIView {
-    var maxIterations: Int = 500
+    var maxIterations: Int = 100
     var boundsSize: Double = 5.0
-    // Масив кольорів для фракталу
     var colors: [UIColor] = [.black, .white]
+    var scale: CGFloat = 1.0
+    var centerOffset: CGPoint = .zero
 
     override func draw(_ rect: CGRect) {
         guard let context = UIGraphicsGetCurrentContext() else { return }
 
         let width = Int(rect.width)
         let height = Int(rect.height)
+        let scaleFactor = boundsSize / (Double(min(width, height)) * Double(scale))
+        
         for x in 0..<width {
             for y in 0..<height {
                 let c = ComplexNumber(
-                    real: boundsSize * (Double(x) / Double(width)) - boundsSize / 2,
-                    imaginary: boundsSize * (Double(y) / Double(height)) - boundsSize / 2
+                    real: scaleFactor * (Double(x) - Double(width) / 2 + Double(centerOffset.x)),
+                    imaginary: scaleFactor * (Double(y) - Double(height) / 2 + Double(centerOffset.y))
                 )
                 var z = ComplexNumber(real: 0, imaginary: 0)
                 var iterations = 0
@@ -76,6 +131,14 @@ class SinFractalUIView: UIView {
                 context.setFillColor(color.cgColor)
                 context.fill(CGRect(x: x, y: y, width: 1, height: 1))
             }
+        }
+    }
+
+    @objc func handlePinch(_ pinch: UIPinchGestureRecognizer) {
+        if pinch.state == .began || pinch.state == .changed {
+            scale *= pinch.scale
+            pinch.scale = 1.0
+            setNeedsDisplay()
         }
     }
 }
